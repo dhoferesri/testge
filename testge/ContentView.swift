@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import ArcGIS
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        EmptyView().task {
+            let geometryEditor: GeometryEditor = {
+                let geometryEditor = GeometryEditor()
+                geometryEditor.start(withType: Polyline.self)
+                geometryEditor.insertVertex(at: Point(latitude: 48.195343, longitude: 16.369302))
+                return geometryEditor
+            }()
         }
-        .padding()
     }
 }
 

@@ -14,6 +14,7 @@
 		3B5DBE2D2BDBCEFB001CA55A /* testgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DBE2C2BDBCEFB001CA55A /* testgeTests.swift */; };
 		3B5DBE372BDBCEFC001CA55A /* testgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DBE362BDBCEFC001CA55A /* testgeUITests.swift */; };
 		3B5DBE392BDBCEFC001CA55A /* testgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DBE382BDBCEFC001CA55A /* testgeUITestsLaunchTests.swift */; };
+		3B5DBE4A2BDFC065001CA55A /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5DBE492BDFC065001CA55A /* ArcGIS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5DBE4A2BDFC065001CA55A /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,7 @@
 				3B5DBE2B2BDBCEFB001CA55A /* testgeTests */,
 				3B5DBE352BDBCEFC001CA55A /* testgeUITests */,
 				3B5DBE192BDBCEE4001CA55A /* Products */,
+				3B5DBE482BDFC065001CA55A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +130,13 @@
 			path = testgeUITests;
 			sourceTree = "<group>";
 		};
+		3B5DBE482BDFC065001CA55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +153,9 @@
 			dependencies = (
 			);
 			name = testge;
+			packageProductDependencies = (
+				3B5DBE492BDFC065001CA55A /* ArcGIS */,
+			);
 			productName = testge;
 			productReference = 3B5DBE182BDBCEE4001CA55A /* testge.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 3B5DBE0F2BDBCEE3001CA55A;
+			packageReferences = (
+				3B5DBE452BDBDB31001CA55A /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */,
+			);
 			productRefGroup = 3B5DBE192BDBCEE4001CA55A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B5DBE452BDBDB31001CA55A /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/arcgis-maps-sdk-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 200.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B5DBE492BDFC065001CA55A /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5DBE452BDBDB31001CA55A /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */;
+			productName = ArcGIS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B5DBE102BDBCEE3001CA55A /* Project object */;
 }
